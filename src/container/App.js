@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/layout/Navbar';
 import {
   BrowserRouter as Router, Switch, Route
 } from "react-router-dom";
@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div className="overflow-x-hidden font-poppins ">
       <Router>
         <Navbar />
         <Switch>

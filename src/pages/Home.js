@@ -1,10 +1,12 @@
 import Hero from "../components/Hero"
+import ShortenLink from "../components/ShortenLink"
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Hero />
-        </div>
+            <ShortenLink />
+        </main>
     );
 }
 
