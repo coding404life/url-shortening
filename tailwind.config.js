@@ -1,14 +1,15 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: [ './src/**/*.{js,jsx,ts,tsx}', './public/index.html' ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        'poppins': [ 'Poppins', 'sans-serif' ]
       },
       colors: {
         'cayn': '#2ACFCF',
-        'violet': '#3b3054'
+        'violet': '#3b3054',
+        'dark-violet': '#232127'
       },
       backgroundImage: theme => ({
         'hero': "url('../src/assets/images/illustration-working.svg')",
