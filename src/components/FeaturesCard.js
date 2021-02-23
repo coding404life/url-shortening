@@ -1,3 +1,4 @@
+import React from 'react';
 
 const FeaturesCard = ({ headingText, paragraphText, imgSrc, className }) => {
     return (

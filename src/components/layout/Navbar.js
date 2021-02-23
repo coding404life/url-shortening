@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Dropdown from '../Dropdown';
 
 const Navbar = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
                 </div>
                 <div className='hidden lg:block'>
                     <button className='mr-8 text-gray-500'>Login</button>
-                    <button className='rounded-full py-2 px-6 bg-cayn text-white'>Sign Up</button>
+                    <button className='rounded-full py-2 px-6 bg-cayn text-white  hover:bg-light-cayn'>Sign Up</button>
                 </div>
                 <svg onClick={toggle} className='w-6 h-6 lg:hidden cursor-pointer' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

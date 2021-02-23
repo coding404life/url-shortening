@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         'cayn': '#2ACFCF',
+        'light-cayn': '#9be2e3',
         'violet': '#3b3054',
         'dark-violet': '#232127'
       },
@@ -19,7 +20,9 @@ module.exports = {
 
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: [ 'disabled' ]
+    },
   },
   plugins: [],
 }

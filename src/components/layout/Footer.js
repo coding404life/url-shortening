@@ -3,6 +3,7 @@ import instgramIcon from '../../assets/images/icon-instagram.svg';
 import facebookIcon from '../../assets/images/icon-facebook.svg';
 import painterestIcon from '../../assets/images/icon-pinterest.svg';
 import twitterIcon from '../../assets/images/icon-twitter.svg';
+import React from 'react';
 
 const Footer = () => {
     return (

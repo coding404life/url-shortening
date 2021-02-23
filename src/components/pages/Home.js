@@ -1,13 +1,12 @@
 import Advanced from "../Advanced"
 import BoostLinks from "../BoostLinks"
+import React from 'react';
 import Hero from "../Hero"
-import ShortenLink from "../ShortenLink"
 
 const Home = () => {
     return (
         <main>
             <Hero />
-            <ShortenLink />
             <Advanced />
             <BoostLinks />
         </main>
