@@ -1,13 +1,22 @@
-import Advanced from "../Advanced"
+import Advanced from "../advanced components/Advanced"
 import BoostLinks from "../BoostLinks"
 import React from 'react';
-import Hero from "../Hero"
+import Hero from "../Hero";
+import FocusContext from '../../context/context';
 
 const Home = () => {
+    const inputElementRef = React.useRef(null);
+
+    const clickFocusHandler = () => {
+        inputElementRef.current.focus();
+    }
+
     return (
         <main>
-            <Hero />
-            <Advanced />
+            <FocusContext.Provider value={{ inputEl: inputElementRef, clickHandler: clickFocusHandler }}>
+                <Hero />
+                <Advanced />
+            </FocusContext.Provider>
             <BoostLinks />
         </main>
     );

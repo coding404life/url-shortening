@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button from "../Button"
 import React, { useRef, useState } from 'react';
 
 const ShortLinks = ({ data }) => {

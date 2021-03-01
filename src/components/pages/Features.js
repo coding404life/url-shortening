@@ -1,4 +1,4 @@
-import Advanced from "../Advanced"
+import Advanced from "../advanced components/Advanced"
 import React from 'react';
 
 const Features = () => {

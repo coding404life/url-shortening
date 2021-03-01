@@ -1,8 +1,8 @@
 import FeaturesCard from "./FeaturesCard"
-import iconBrand from '../assets/images/icon-brand-recognition.svg';
-import detailedRecords from '../assets/images/icon-detailed-records.svg';
-import FullyCustom from '../assets/images/icon-fully-customizable.svg';
-import ShortenField from "./ShortenField";
+import iconBrand from '../../assets/images/icon-brand-recognition.svg';
+import detailedRecords from '../../assets/images/icon-detailed-records.svg';
+import FullyCustom from '../../assets/images/icon-fully-customizable.svg';
+import ShortenField from "../shorten components/ShortenField";
 import React from 'react';
 
 const Advanced = () => {

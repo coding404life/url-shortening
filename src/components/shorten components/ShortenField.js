@@ -1,14 +1,15 @@
-import Button from "./Button"
+import Button from "../Button"
 import React, { useState } from 'react';
 import axios from 'axios';
 import ShortLinks from "./ShortLinks";
+import FocusContext from '../../context/context';
 
 const ShortenField = () => {
     const [ data, setData ] = useState(null);
     const [ url, setUrl ] = useState(null);
     const [ isLoading, setIsLoading ] = useState(false);
     const [ isError, setIsError ] = useState(false);
-    const [ buttonDisable, setButtonDisable ] = useState(false)
+    const [ buttonDisable, setButtonDisable ] = useState(false);
 
     const fetchRequest = async () => {
         setIsError(false);
@@ -28,10 +29,14 @@ const ShortenField = () => {
     return (
         <div className='max-w-3xl xl:max-w-6xl mx-auto m-10 lg:mx-auto'>
             <div className='relative z-50 flex flex-col md:flex-row md:items-center  rounded-lg bg-shorten bg-violet p-5 md:p-10 -mt-56 items-start'>
-                <input type="text" placeholder='Shorten a Link here!..'
-                    className={'md:mr-5 p-3 rounded-lg w-full mb-3 md:mb-0 focus:outline-none focus:ring focus:border-cayn' + (isError ? ' border-2 border-red-500' : '')}
-                    onChange={e => setUrl(`https://api.shrtco.de/v2/shorten?url=${e.target.value}`)}
-                />
+
+                <FocusContext.Consumer>
+                    {(context) => <input type="text" placeholder='Shorten a Link here!..'
+                        className={'md:mr-5 p-3 rounded-lg w-full mb-3 md:mb-0 focus:outline-none focus:ring focus:border-cayn' + (isError ? ' border-2 border-red-500' : '')}
+                        onChange={e => setUrl(`https://api.shrtco.de/v2/shorten?url=${e.target.value}`)}
+                        ref={context.inputEl}
+                    />}
+                </FocusContext.Consumer>
 
                 {isError && <div className='text-red-500 mb-3 md:absolute bottom-0'>Please Add a Link</div>}
 
